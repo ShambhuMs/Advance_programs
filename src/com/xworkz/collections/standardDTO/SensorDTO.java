@@ -1,4 +1,4 @@
-package com.xworkz.collections.comparator;
+package com.xworkz.collections.standardDTO;
 
 import lombok.*;
 

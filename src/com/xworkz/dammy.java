@@ -1,2 +1,4 @@
-package com.xworkz;public class dammy {
+package com.xworkz;
+
+public class dammy {
 }
