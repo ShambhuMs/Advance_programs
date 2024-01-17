@@ -1,13 +1,77 @@
 package com.xworkz.collections.lambdarunner;
 
-import com.xworkz.collections.comparabledto.AlaramDTO;
+import com.xworkz.collections.comparabledto.AlarmDTO;
 
-public class AlaramRunner {
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class AlarmRunner {
     public static void main(String[] args) {
-        AlaramDTO alaramDTO=new AlaramDTO("Mobile",1,10000);
-        AlaramDTO alaramDTO1=new AlaramDTO("Mobile",1,10000);
-        AlaramDTO alaramDTO2=new AlaramDTO("Mobile",1,10000);
-        AlaramDTO alaramDTO3=new AlaramDTO("Mobile",1,10000);
-        AlaramDTO alaramDTO4=new AlaramDTO("Mobile",1,10000);
+        AlarmDTO alarmDTO=new AlarmDTO("System alarm",1,10000);
+        AlarmDTO alarmDTO1=new AlarmDTO("Burglar alarms",4,50000);
+        AlarmDTO alarmDTO2=new AlarmDTO("Bells",3,40000);
+        AlarmDTO alarmDTO3=new AlarmDTO("Water Alarm",5,70000);
+        AlarmDTO alarmDTO4=new AlarmDTO("Motion sensors",2,20000);
+
+        List<AlarmDTO> list=new ArrayList<>();
+        list.add(alarmDTO);
+        list.add(alarmDTO1);
+        list.add(alarmDTO2);
+        list.add(alarmDTO3);
+        list.add(alarmDTO4);
+
+        System.out.println("Default Ascending order based on Quantity..");
+        Collections.sort(list);
+        for (AlarmDTO a:list
+        ) {
+            System.out.println(a);
+        }
+
+        System.out.println("Ascending order based on Cost.....");
+       Collections.sort(list,(a1,a2)->{
+           return Double.compare(a1.getCost(),a2.getCost());
+       });
+       for (AlarmDTO a:list
+             ) {
+            System.out.println(a);
+        }
+
+        System.out.println("Ascending order based on Type.....");
+        Collections.sort(list,(a1,a2)->{
+            return String.CASE_INSENSITIVE_ORDER.compare(a1.getType(), a2.getType());
+        });
+        for (AlarmDTO a:list
+        ) {
+            System.out.println(a);
+        }
+
+        System.out.println("Descending order based on Quantity.....");
+        Collections.sort(list,(a1,a2)->{
+            return Double.compare(a2.getQuantity(),a1.getQuantity());
+        });
+        for (AlarmDTO a:list
+        ) {
+            System.out.println(a);
+        }
+
+        System.out.println("Descending order based on Cost.....");
+        Collections.sort(list,(a1,a2)->{
+            return Double.compare(a2.getCost(),a1.getCost());
+        });
+        for (AlarmDTO a:list
+        ) {
+            System.out.println(a);
+        }
+
+        System.out.println("Descending order based on Type.....");
+        Collections.sort(list,(a1,a2)->{
+            return String.CASE_INSENSITIVE_ORDER.compare(a2.getType(), a1.getType());
+        });
+        for (AlarmDTO a:list
+        ) {
+            System.out.println(a);
+        }
+
     }
 }
