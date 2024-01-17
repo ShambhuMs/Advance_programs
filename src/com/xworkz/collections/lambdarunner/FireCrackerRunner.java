@@ -29,34 +29,34 @@ public class FireCrackerRunner {
         }
 
         System.out.println("Ascending order based on Fuel..");
-        Collections.sort(list,((o1, o2) -> {return String.CASE_INSENSITIVE_ORDER.compare(o1.getFuel(), o2.getFuel());}));
+        Collections.sort(list,((o1, o2)->o1.getFuel().compareTo(o2.getFuel()) ));
         for (FireCrackerDTO f:list
         ) {
             System.out.println(f);
         }
 
         System.out.println("Ascending order based on Color..");
-        Collections.sort(list,((o1, o2) -> {return String.CASE_INSENSITIVE_ORDER.compare(o1.getColor(), o2.getColor());}));
+        Collections.sort(list,((o1, o2) ->o1.getColor().compareTo(o2.getColor())));
         for (FireCrackerDTO f:list
         ) {
             System.out.println(f);
         }
         System.out.println("Descending order based on Heat..");
-        Collections.sort(list,((o1, o2) -> {return Double.compare(o2.getHeat(),o1.getHeat());}));
+        Collections.sort(list,((o1, o2) -> Double.compare(o2.getHeat(),o1.getHeat())));
         for (FireCrackerDTO f:list
         ) {
             System.out.println(f);
         }
 
         System.out.println("Descending order based on Fuel..");
-        Collections.sort(list,((o1, o2) -> {return String.CASE_INSENSITIVE_ORDER.compare(o2.getFuel(), o1.getFuel());}));
+        Collections.sort(list,((o1, o2) ->o2.getFuel().compareTo(o1.getFuel())));
         for (FireCrackerDTO f:list
         ) {
             System.out.println(f);
         }
 
         System.out.println("Descending order based on Color..");
-        Collections.sort(list,((o1, o2) -> {return String.CASE_INSENSITIVE_ORDER.compare(o2.getColor(), o1.getColor());}));
+        Collections.sort(list,((o1, o2) -> o2.getColor().compareTo(o1.getColor())));
         for (FireCrackerDTO f:list
         ) {
             System.out.println(f);

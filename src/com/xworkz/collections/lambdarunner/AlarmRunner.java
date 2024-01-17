@@ -29,49 +29,42 @@ public class AlarmRunner {
         }
 
         System.out.println("Ascending order based on Cost.....");
-       Collections.sort(list,(a1,a2)->{
-           return Double.compare(a1.getCost(),a2.getCost());
-       });
+       Collections.sort(list,(a1,a2)-> Double.compare(a1.getCost(),a2.getCost()));
+
        for (AlarmDTO a:list
              ) {
             System.out.println(a);
         }
 
         System.out.println("Ascending order based on Type.....");
-        Collections.sort(list,(a1,a2)->{
-            return String.CASE_INSENSITIVE_ORDER.compare(a1.getType(), a2.getType());
-        });
+        Collections.sort(list,(a1,a2)->a1.getType().compareTo(a2.getType()));
         for (AlarmDTO a:list
         ) {
             System.out.println(a);
         }
 
         System.out.println("Descending order based on Quantity.....");
-        Collections.sort(list,(a1,a2)->{
-            return Double.compare(a2.getQuantity(),a1.getQuantity());
-        });
+        Collections.sort(list,(a1,a2)-> Double.compare(a2.getQuantity(),a1.getQuantity()));
+
         for (AlarmDTO a:list
         ) {
             System.out.println(a);
         }
 
         System.out.println("Descending order based on Cost.....");
-        Collections.sort(list,(a1,a2)->{
-            return Double.compare(a2.getCost(),a1.getCost());
-        });
+        Collections.sort(list,(a1,a2)-> Double.compare(a2.getCost(),a1.getCost()));
         for (AlarmDTO a:list
         ) {
             System.out.println(a);
         }
 
         System.out.println("Descending order based on Type.....");
-        Collections.sort(list,(a1,a2)->{
-            return String.CASE_INSENSITIVE_ORDER.compare(a2.getType(), a1.getType());
-        });
-        for (AlarmDTO a:list
-        ) {
-            System.out.println(a);
-        }
+        Collections.sort(list,(a1,a2)-> a2.getType().compareTo(a1.getType()));
+            for (AlarmDTO a : list
+            ) {
+                System.out.println(a);
+            }
 
-    }
+
+        }
 }

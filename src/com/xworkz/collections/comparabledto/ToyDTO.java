@@ -13,6 +13,6 @@ public class ToyDTO implements Comparable<ToyDTO>{
     private int quantity;
     @Override
     public int compareTo(ToyDTO o) {
-        return String.CASE_INSENSITIVE_ORDER.compare(this.type,o.type);
+        return this.type.compareTo(o.type);
     }
 }

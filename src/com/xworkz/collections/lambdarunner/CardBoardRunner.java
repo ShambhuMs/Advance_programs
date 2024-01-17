@@ -29,33 +29,33 @@ public class CardBoardRunner {
         }
 
         System.out.println(" Ascending order based on Cost....");
-        Collections.sort(list,((o1, o2) ->{ return Double.compare(o1.getCost(), o2.getCost());} ));
+        Collections.sort(list,((o1, o2) -> Double.compare(o1.getCost(), o2.getCost()) ));
         for (CardBoardDTO c:list
              ) {
             System.out.println(c);
         }
 
         System.out.println(" Ascending order based on Quantity....");
-        Collections.sort(list,((o1, o2) ->{ return Integer.compare(o1.getQuantity(), o2.getQuantity());} ));
+        Collections.sort(list,((o1, o2) ->Integer.compare(o1.getQuantity(), o2.getQuantity()) ));
         for (CardBoardDTO c:list
              ) {
             System.out.println(c);
         }
         System.out.println("Descending order based on Color..");
-        Collections.sort(list,((o1, o2) ->{return  String.CASE_INSENSITIVE_ORDER.compare(o2.getColor(), o1.getColor());} ));
+        Collections.sort(list,((o1, o2) -> o1.getColor().compareTo(o2.getColor())));
         for (CardBoardDTO c:list
              ) {
             System.out.println(c);
         }
         System.out.println(" Descending order based on Cost....");
-        Collections.sort(list,((o1, o2) ->{ return Double.compare(o2.getCost(), o1.getCost());} ));
+        Collections.sort(list,((o1, o2) ->Double.compare(o2.getCost(), o1.getCost()) ));
         for (CardBoardDTO c:list
         ) {
             System.out.println(c);
         }
 
         System.out.println(" Descending order based on Quantity....");
-        Collections.sort(list,((o1, o2) ->{ return Integer.compare(o2.getQuantity(), o1.getQuantity());} ));
+        Collections.sort(list,((o1, o2) -> Integer.compare(o2.getQuantity(), o1.getQuantity()) ));
         for (CardBoardDTO c:list
         ) {
             System.out.println(c);

@@ -29,21 +29,21 @@ public class ToyRunner {
         }
 
         System.out.println("Ascending order based on cost..");
-        Collections.sort(list,((o1, o2) -> { return Double.compare(o1.getCost(),o2.getCost());}));
+        Collections.sort(list,((o1, o2) ->  Double.compare(o1.getCost(),o2.getCost()) ));
         for (ToyDTO t:list
         ) {
             System.out.println(t);
         }
 
         System.out.println("Ascending order based on quantity..");
-        Collections.sort(list,((o1, o2) -> { return Integer.compare(o1.getQuantity(),o2.getQuantity());}));
+        Collections.sort(list,((o1, o2) ->  Integer.compare(o1.getQuantity(),o2.getQuantity()) ));
         for (ToyDTO t:list
         ) {
             System.out.println(t);
         }
 
         System.out.println("Descending order based on type..");
-        Collections.sort(list,((o1, o2) -> { return  String.CASE_INSENSITIVE_ORDER.compare(o2.getType(), o1.getType());}));
+        Collections.sort(list,((o1, o2) ->  o2.getType().compareTo(o1.getType())));
         for (ToyDTO t:list
         ) {
             System.out.println(t);
@@ -51,14 +51,14 @@ public class ToyRunner {
 
 
         System.out.println("Descending order based on cost..");
-        Collections.sort(list,((o1, o2) -> { return Double.compare(o2.getCost(),o1.getCost());}));
+        Collections.sort(list,((o1, o2) ->  Double.compare(o2.getCost(),o1.getCost()) ));
         for (ToyDTO t:list
         ) {
             System.out.println(t);
         }
 
         System.out.println("Descending order based on quantity..");
-        Collections.sort(list,((o1, o2) -> { return Integer.compare(o2.getQuantity(),o1.getQuantity());}));
+        Collections.sort(list,((o1, o2) ->  Integer.compare(o2.getQuantity(),o1.getQuantity()) ));
         for (ToyDTO t:list
         ) {
             System.out.println(t);

@@ -30,34 +30,34 @@ public class ThreadRunner {
         }
 
         System.out.println("Ascending order based on type..");
-        Collections.sort(list,((o1, o2) -> {return  String.CASE_INSENSITIVE_ORDER.compare(o1.getType(),o2.getType());}));
+        Collections.sort(list,((o1, o2) -> o1.getType().compareTo(o2.getType())));
         for (ThreadDTO r:list
         ) {
             System.out.println(r);
         }
 
         System.out.println("Ascending order based on length..");
-        Collections.sort(list,((o1, o2) -> {return  Double.compare(o1.getLength(),o2.getLength());}));
+        Collections.sort(list,((o1, o2) ->   Double.compare(o1.getLength(),o2.getLength()) ));
         for (ThreadDTO r:list
         ) {
             System.out.println(r);
         }
 
         System.out.println("Descending order based on length..");
-        Collections.sort(list,((o1, o2) -> {return  Double.compare(o2.getLength(),o1.getLength());}));
+        Collections.sort(list,((o1, o2) ->   Double.compare(o2.getLength(),o1.getLength()) ));
         for (ThreadDTO r:list
         ) {
             System.out.println(r);
         }
         System.out.println("Descending order based on type..");
-        Collections.sort(list,((o1, o2) -> {return  String.CASE_INSENSITIVE_ORDER.compare(o2.getType(),o1.getType());}));
+        Collections.sort(list,((o1, o2) -> o2.getType().compareTo(o1.getType()) ));
         for (ThreadDTO r:list
         ) {
             System.out.println(r);
         }
 
         System.out.println("Descending order based on cost..");
-        Collections.sort(list,((o1, o2) -> {return  Double.compare(o2.getCost(),o1.getCost());}));
+        Collections.sort(list,((o1, o2) -> Double.compare(o2.getCost(),o1.getCost()) ));
         for (ThreadDTO r:list
         ) {
             System.out.println(r);

@@ -31,21 +31,21 @@ public class NeedleRunner {
         }
 
         System.out.println("Ascending order based on weight....");
-        Collections.sort(list,((o1, o2) ->{ return Double.compare(o1.getWeight(), o2.getWeight());} ));
+        Collections.sort(list,((o1, o2) -> Double.compare(o1.getWeight(), o2.getWeight()) ));
         for (NeedleDTO c:list
         ) {
             System.out.println(c);
         }
 
         System.out.println("Descending order based on Length....");
-        Collections.sort(list,((o1, o2) ->{ return Double.compare(o2.getLength(), o1.getLength());} ));
+        Collections.sort(list,((o1, o2) ->Double.compare(o2.getLength(), o1.getLength()) ));
         for (NeedleDTO c:list
         ) {
             System.out.println(c);
         }
 
         System.out.println("Descending order based on Weight....");
-        Collections.sort(list,((o1, o2) ->{ return Double.compare(o2.getWeight(), o1.getWeight());} ));
+        Collections.sort(list,((o1, o2) -> Double.compare(o2.getWeight(), o1.getWeight()) ));
         for (NeedleDTO c:list
         ) {
             System.out.println(c);

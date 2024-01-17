@@ -29,14 +29,14 @@ public class PinRunner {
         }
 
         System.out.println("Ascending order based on Type");
-        Collections.sort(list,((o1, o2) -> {return String.CASE_INSENSITIVE_ORDER.compare(o1.getType(),o2.getType());}));
+        Collections.sort(list,((o1, o2) -> o1.getType().compareTo(o2.getType())));
         for (PinDTO s:list
         ) {
             System.out.println(s);
         }
 
         System.out.println("Descending order based on Cost");
-        Collections.sort(list,((o1, o2) -> {return Double.compare(o2.getCost(),o1.getCost());}));
+        Collections.sort(list,((o1, o2) -> Double.compare(o2.getCost(),o1.getCost())));
         for (PinDTO s:list
         ) {
             System.out.println(s);
@@ -45,7 +45,7 @@ public class PinRunner {
 
 
         System.out.println("Descending order based on Type");
-        Collections.sort(list,((o1, o2) -> {return String.CASE_INSENSITIVE_ORDER.compare(o2.getType(),o1.getType());}));
+        Collections.sort(list,((o1, o2) -> o2.getType().compareTo(o1.getType())));
         for (PinDTO s:list
         ) {
             System.out.println(s);

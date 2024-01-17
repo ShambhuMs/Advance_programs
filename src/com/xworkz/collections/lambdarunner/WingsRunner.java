@@ -29,33 +29,33 @@ public class WingsRunner {
         }
 
         System.out.println("Ascending order based on cost..");
-        Collections.sort(list,((o1, o2) -> {return Double.compare(o1.getCost(),o2.getCost());}));
+        Collections.sort(list,((o1, o2) ->  Double.compare(o1.getCost(),o2.getCost()) ));
         for (WingsDTO w:list
         ) {
             System.out.println(w);
         }
         System.out.println("Ascending order based on type..");
-        Collections.sort(list,((o1, o2) -> {return String.CASE_INSENSITIVE_ORDER.compare(o1.getType(), o2.getType());}));
+        Collections.sort(list,((o1, o2) -> o1.getType().compareTo(o2.getType())));
         for (WingsDTO w:list
         ) {
             System.out.println(w);
         }
 
         System.out.println("Descending order based on warranty..");
-        Collections.sort(list,((o1, o2) -> {return Integer.compare(o2.getWarranty(),o1.getWarranty());}));
+        Collections.sort(list,((o1, o2) ->  Integer.compare(o2.getWarranty(),o1.getWarranty()) ));
         for (WingsDTO w:list
         ) {
             System.out.println(w);
         }
 
         System.out.println("Descending order based on cost..");
-        Collections.sort(list,((o1, o2) -> {return Double.compare(o2.getCost(),o1.getCost());}));
+        Collections.sort(list,((o1, o2) ->  Double.compare(o2.getCost(),o1.getCost()) ));
         for (WingsDTO w:list
         ) {
             System.out.println(w);
         }
         System.out.println("Descending order based on type..");
-        Collections.sort(list,((o1, o2) -> {return String.CASE_INSENSITIVE_ORDER.compare(o2.getType(), o1.getType());}));
+        Collections.sort(list,((o1, o2) -> o2.getType().compareTo(o1.getType())));
         for (WingsDTO w:list
         ) {
             System.out.println(w);

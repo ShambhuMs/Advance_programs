@@ -29,33 +29,33 @@ public class JoystickRunner {
         }
 
         System.out.println(" Ascending order based on Brand....");
-        Collections.sort(list,((o1, o2) ->{ return String.CASE_INSENSITIVE_ORDER.compare(o1.getBrand(), o2.getBrand());} ));
+        Collections.sort(list,((o1, o2) -> o1.getBrand().compareTo(o2.getBrand()) ));
         for (JoystickDTO c:list
         ) {
             System.out.println(c);
         }
 
         System.out.println(" Ascending order based on Warranty....");
-        Collections.sort(list,((o1, o2) ->{ return Integer.compare(o1.getWarranty(), o2.getWarranty());} ));
+        Collections.sort(list,((o1, o2) -> Integer.compare(o1.getWarranty(), o2.getWarranty()) ));
         for (JoystickDTO c:list
         ) {
             System.out.println(c);
         }
         System.out.println("Descending order based on Brand..");
-        Collections.sort(list,((o1, o2) ->{return  String.CASE_INSENSITIVE_ORDER.compare(o2.getBrand(), o1.getBrand());} ));
+        Collections.sort(list,((o1, o2) -> o2.getBrand().compareTo(o1.getBrand())));
         for (JoystickDTO c:list
         ) {
             System.out.println(c);
         }
         System.out.println(" Descending order based on Cost....");
-        Collections.sort(list,((o1, o2) ->{ return Double.compare(o2.getCost(), o1.getCost());} ));
+        Collections.sort(list,((o1, o2) -> Double.compare(o2.getCost(), o1.getCost()) ));
         for (JoystickDTO c:list
         ) {
             System.out.println(c);
         }
 
         System.out.println(" Descending order based on Warranty....");
-        Collections.sort(list,((o1, o2) ->{ return Integer.compare(o2.getWarranty(), o1.getWarranty());} ));
+        Collections.sort(list,((o1, o2) -> Integer.compare(o2.getWarranty(), o1.getWarranty()) ));
         for (JoystickDTO c:list
         ) {
             System.out.println(c);
