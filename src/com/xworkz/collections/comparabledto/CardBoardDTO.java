@@ -13,6 +13,7 @@ public class CardBoardDTO implements Comparable<CardBoardDTO>{
     private int quantity;
     @Override
     public int compareTo(CardBoardDTO o) {
+
         return this.color.compareTo(o.color);
     }
 }
