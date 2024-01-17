@@ -82,5 +82,6 @@ public class TelescopeRunner {
         ) {
             System.out.println(distance);
         }
+
     }
 }
