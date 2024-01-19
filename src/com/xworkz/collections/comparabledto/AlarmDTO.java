@@ -7,12 +7,15 @@ import lombok.*;
 @ToString
 @Getter
 @AllArgsConstructor
-public class ToyDTO implements Comparable<ToyDTO>{
+public class AlarmDTO implements Comparable<AlarmDTO>{
     private String type;
-    private double cost;
     private int quantity;
+    private double cost;
+
     @Override
-    public int compareTo(ToyDTO o) {
-        return String.CASE_INSENSITIVE_ORDER.compare(this.type,o.type);
+    public int compareTo(AlarmDTO o) {
+        int no= Integer.compare(this.quantity,o.quantity);
+        return no;
     }
+
 }
