@@ -1,2 +1,4 @@
-package com.xworkz.map;public class d {
+package com.xworkz.map;
+
+public class d {
 }
