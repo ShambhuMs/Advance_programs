@@ -171,17 +171,17 @@ public class MedicineRunner {
                 System.out.println("==============================================");
                 System.out.println("collect all manufacture date less than 30 days");
 
-                list.stream().filter(l -> l.getManufactureDate().isBefore(LocalDate.now())).forEach(l -> System.out.println(l));
+                list.stream().filter(l -> l.getManufactureDate().isBefore(LocalDate.now().plusDays(30))).forEach(l -> System.out.println(l));
 
                 System.out.println("==============================================");
                 System.out.println("collect all expiry date less than 30 days");
 
-                list.stream().filter(l -> l.getExpiryDate().isBefore(LocalDate.now())).forEach(l -> System.out.println(l));
+                list.stream().filter(l -> l.getExpiryDate().isBefore(LocalDate.now().plusDays(30))).forEach(l -> System.out.println(l));
 
                 System.out.println("==============================================");
                 System.out.println("collect all manufacture date greater than 30 days");
 
-                list.stream().filter(l -> l.getManufactureDate().isAfter(LocalDate.now())).forEach(l -> System.out.println(l));
+                list.stream().filter(l -> l.getManufactureDate().isAfter(LocalDate.now().plusDays(30))).forEach(l -> System.out.println(l));
 
             
     }
